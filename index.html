@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>White Role Play</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <span>White RP</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" title="Преимущество" onclick="slowScroll('#overiew')">Преимущество</a>
+      <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+      <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">Ответы на вопросы</a>
+    </div>
+  </header>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('body').animate({
+        scrollTop: $(id).offset().top
+      }, 500); //500 speed
+    }
+  </script>
+</body>
+</html>
