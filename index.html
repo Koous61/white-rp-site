@@ -14,19 +14,94 @@
     </div>
     <div id="about">
       <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
-      <a href="#" title="Преимущество" onclick="slowScroll('#overiew')">Преимущество</a>
+      <a href="#" title="Преимущество" onclick="slowScroll('#overview')">Преимущество</a>
       <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
       <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">Ответы на вопросы</a>
     </div>
   </header>
 
+  <div id="top">
+    <h1>Программировние</h1>
+    <h3>Как способ жить</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши услуги помогут вам!</h2>
+      <span>Большой выбора услуг</span>
+    </div>
+    <div class="text">
+      <span>Статья́ — это жанр журналистики, в котором автор ставит задачу проанализировать общественные ситуации, процессы, явления,
+        прежде всего с точки зрения закономерностей, лежащих в их основе.Такому жанру как статья присуща шири практических обобщений,
+        глубокий анализ фактов и явлений, четкая социальная направленность[источник не указан 3267 дней]. В статье автор рассматривает
+        отдельные ситуации как часть более широкого явления. Автор аргументирует и выстраивает свою позицию через систему фактов.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Преимущества</h2>
+    <h4>С нами все проще!</h4>
+
+    <div class="img">
+      <img src="http://lichnyj-dnevnik.ru/wp-content/uploads/malenkie-risunki-dlja-srisovki-8.jpg" alt="">
+      <span>Уроки</span>
+    </div>
+
+    <div class="img">
+      <img src="http://lichnyj-dnevnik.ru/wp-content/uploads/malenkie-risunki-dlja-srisovki-8.jpg" alt="">
+      <span>Уроки</span>
+    </div>
+
+    <div class="img">
+      <img src="http://lichnyj-dnevnik.ru/wp-content/uploads/malenkie-risunki-dlja-srisovki-8.jpg" alt="">
+      <span>Уроки</span>
+    </div>
+
+    <div class="img">
+      <img src="http://lichnyj-dnevnik.ru/wp-content/uploads/malenkie-risunki-dlja-srisovki-8.jpg" alt="">
+      <span>Уроки</span>
+    </div>
+
+    <div class="img">
+      <img src="http://lichnyj-dnevnik.ru/wp-content/uploads/malenkie-risunki-dlja-srisovki-8.jpg" alt="">
+      <span>Уроки</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center>
+      <h5>
+        Обратная связь
+      </h5>
+    </center>
+
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+
+      <label for="email">Ваша почта <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="email" id="email"><br>
+
+      <label for="message">Сообщение <span>*</span></label><br>
+      <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+      <div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
+  <script type="">
     function slowScroll(id) {
-      $('body').animate({
+      $('html, body').animate({
         scrollTop: $(id).offset().top
       }, 500); //500 speed
     }
+
+    $(document).on("scroll", function () {
+        if ($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+        else
+            $("header").attr("class", "fixed");
+    });
   </script>
 </body>
 </html>
